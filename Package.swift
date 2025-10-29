@@ -13,7 +13,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/CleverTap/clevertap-ios-sdk.git", .upToNextMajor(from: "7.1.1")),
+        .package(url: "https://github.com/IDN-Media/ios.clevertap-ios-sdk.git", .upToNextMajor(from: "1.0.0")),
         .package(url: "https://github.com/Quick/Quick.git", .upToNextMajor(from: "3.0.0")),
         .package(url: "https://github.com/Quick/Nimble.git", .upToNextMajor(from: "8.1.2")),
     ],
@@ -21,7 +21,7 @@ let package = Package(
         .target(
             name: "CleverTapGeofence",
             dependencies: [
-                .product(name: "CleverTapSDK", package: "clevertap-ios-sdk")
+                .product(name: "CleverTapSDK", package: "ios.clevertap-ios-sdk")
             ],
             path: "Sources",
             resources: [
@@ -32,7 +32,7 @@ let package = Package(
             name: "CleverTapGeofenceTests",
             dependencies: [
                 "CleverTapGeofence",
-                .product(name: "CleverTapSDK", package: "clevertap-ios-sdk"),
+                .product(name: "CleverTapSDK", package: "ios.clevertap-ios-sdk"),
                 "Quick",
                 "Nimble"
             ],
